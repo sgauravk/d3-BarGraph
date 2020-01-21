@@ -29,14 +29,8 @@ const data = [
   }
 ];
 
-const main = function() {
-  const container = d3.select("#buildings");
-  const svg = container
-    .append("svg")
-    .attr("width", 800)
-    .attr("height", 500);
-
-  svg
+const addRectangles = function(svg) {
+  return svg
     .selectAll()
     .data(data)
     .enter()
@@ -46,6 +40,28 @@ const main = function() {
     .attr("x", (n, i) => i * 70 + 80)
     .attr("y", n => 450 - n.height / 2)
     .attr("fill", (n, i) => `rgb(${n.height / 2}, ${i * 50} ,${i * 20})`);
+};
+
+const addHeight = function(svg) {
+  return svg
+    .selectAll()
+    .data(data)
+    .enter()
+    .append("text")
+    .text(x => x.height)
+    .attr("x", (n, i) => i * 70 + 80)
+    .attr("y", n => 444 - n.height / 2);
+};
+
+const main = function() {
+  const container = d3.select("#buildings");
+  const svg = container
+    .append("svg")
+    .attr("width", 800)
+    .attr("height", 500);
+
+  addRectangles(svg);
+  addNames(svg);
 };
 
 window.onload = main;
