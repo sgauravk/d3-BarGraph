@@ -65,16 +65,34 @@ const addNames = function(svg) {
     .attr("y", (n, i) => -(i * 70 + 90));
 };
 
+const addAxis = function(svg) {
+  return (
+    svg
+      .append("line")
+      .attr("x1", 50)
+      .attr("y1", 450)
+      .attr("x2", data.length * 70 + 80)
+      .attr("y2", 450) &&
+    svg
+      .append("line")
+      .attr("x1", 50)
+      .attr("y1", 10)
+      .attr("x2", 50)
+      .attr("y2", 451)
+  );
+};
+
 const main = function() {
   const container = d3.select("#buildings");
   const svg = container
     .append("svg")
-    .attr("width", 800)
+    .attr("width", data.length * 70 + 100)
     .attr("height", 500);
 
   addRectangles(svg);
   addHeight(svg);
   addNames(svg);
+  addAxis(svg);
 };
 
 window.onload = main;

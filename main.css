@@ -3,7 +3,7 @@ html, body {
 }
 
 svg {
-    border: 1px solid blueviolet;
+    border: 2px solid rgb(210, 179, 238);
 }
 
 rect {
@@ -14,4 +14,9 @@ rect {
 #names {
     /* fill: chocolate; */
     transform: rotate(90deg);
+}
+
+line {
+    stroke: rgb(100, 100, 116);
+    stroke-width: 2; 
 }
