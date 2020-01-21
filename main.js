@@ -53,6 +53,18 @@ const addHeight = function(svg) {
     .attr("y", n => 444 - n.height / 2);
 };
 
+const addNames = function(svg) {
+  return svg
+    .selectAll()
+    .data(data)
+    .enter()
+    .append("text")
+    .text(x => x.name)
+    .attr("id", "names")
+    .attr("x", n => 470 - n.height / 2)
+    .attr("y", (n, i) => -(i * 70 + 90));
+};
+
 const main = function() {
   const container = d3.select("#buildings");
   const svg = container
@@ -61,6 +73,7 @@ const main = function() {
     .attr("height", 500);
 
   addRectangles(svg);
+  addHeight(svg);
   addNames(svg);
 };
 
