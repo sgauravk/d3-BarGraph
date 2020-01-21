@@ -83,8 +83,8 @@ const addAxis = function(svg) {
 };
 
 const main = function() {
-  const container = d3.select("#buildings");
-  const svg = container
+  const svg = d3
+    .select("#buildings")
     .append("svg")
     .attr("width", data.length * 70 + 100)
     .attr("height", 500);
