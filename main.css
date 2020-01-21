@@ -1,0 +1,12 @@
+html, body {
+    font-family: sans-serif;
+}
+
+svg {
+    border: 2px solid blueviolet;
+}
+
+rect {
+    stroke-width: 1;
+    stroke: brown;
+}
