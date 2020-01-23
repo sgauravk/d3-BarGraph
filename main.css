@@ -1,29 +1,30 @@
-html, body {
-    font-family: sans-serif;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+html,
+body {
+  font-family: sans-serif;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 rect {
-    stroke-width: 1;
-    stroke: brown;
+  stroke-width: 1;
+  stroke: brown;
 }
 
 h1 {
-    color: gray;
-    text-decoration: underline;
-    text-shadow: 1px 1px #3a3737;
+  color: gray;
+  text-decoration: underline;
+  text-shadow: 1px 1px #3a3737;
 }
 
 #names {
-    transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 line {
-    stroke: rgb(100, 100, 116);
-    stroke-width: 2; 
+  stroke: rgb(100, 100, 116);
+  stroke-width: 2;
 }
